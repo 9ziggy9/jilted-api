@@ -1,0 +1,2 @@
+FLASK_APP=src
+SECRET_KEY=secret
