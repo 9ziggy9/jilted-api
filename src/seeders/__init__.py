@@ -4,17 +4,20 @@ from flask.cli import AppGroup
 seed_commands = AppGroup("seed")
 
 def seed_members():
-    david = Member(name="david")
-    brad = Member(name="brad")
-    john = Member(name="john")
-    cesar = Member(name="cesar")
-    ziggy = Member(name="ziggy")
+    start_members = ["david", "brad", "john", "cesar", "ziggy",
+                     "matt", "jake", "gary", "amanda", "an", "sam",
+                     "ben", "brandon", "alex", "hai", "jack", "jae",
+                     "justin", "katy", "keanen", "kevin", "kyle",
+                     "logan", "lyn", "maliha", "fiona", "randy",
+                     "tony", "will", "yibo", "thenu", "nate"]
 
-    db.session.add(david)
-    db.session.add(brad)
-    db.session.add(john)
-    db.session.add(cesar)
-    db.session.add(ziggy)
+    print("\n")
+    print("Seeding all members ...")
+
+    for m in start_members:
+        mem = Member(name=m)
+        db.session.add(mem)
+
     db.session.commit()
 
 def undo_members():
