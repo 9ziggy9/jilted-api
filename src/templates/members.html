@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<div id="members-container">
+  <h1>AVAILABLE</h1>
+  <ul id="members-list">
+    {% for member in members|reverse %}
+    <li class="members-entry row-color-{{loop.index % 2}}">
+      {{member.name}}
+    </li>
+    {% endfor %}
+  </ul>
+</div>

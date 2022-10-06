@@ -4,17 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/static/index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
   <title>Group App</title>
 </head>
 <body>
   <div id="app-container">
-    <div id="members-container">
-      <h1>Members:</h1>
-      <p>{{var}}</p>
-    </div>
-    <div id="group-container">
-      Groups:
-    </div>
+    {% include "members.html" %}
+    {% include "groups.html" %}
   </div>
 </body>
 </html>
