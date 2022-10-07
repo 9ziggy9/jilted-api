@@ -1,62 +1,13 @@
 <!DOCTYPE html>
 <div id="group-container">
   <h1>GROUPS</h1>
-  <!-- <div id="group-grid-wrapper"> -->
     <div id="group-grid">
+      {% for group in groups %}
       <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
+	{% for member in group.members %}
+	  <p>{{member.name}}</p>
+	{% endfor %}
       </div>
-      <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
-      </div>
-      <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
-      </div>
-      <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
-      </div>
-      <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
-      </div>
-      <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
-      </div>
-      <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
-      </div>
-      <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
-      </div>
-      <div class="group-card">
-	  <p>david</p>
-	  <p>brad</p>
-	  <p>john</p>
-	  <p>cesar</p>
-      </div>
+      {% endfor %}
     </div>
-    <!-- </div> -->
 </div>
