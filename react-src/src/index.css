@@ -1,0 +1,128 @@
+body, html {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: #EEE;
+    font-family: 'Oswald', sans-serif;
+    caret-color: transparent;
+}
+
+#root {
+    position:fixed;
+    width: 100%;
+    height: 100%;
+}
+
+#app-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+h1 {
+    margin:0;
+    padding:0;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#members-container, #group-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    background-color: grey;
+    padding:10px;
+}
+
+#group-container {
+    background-color: #333;
+    color: #EEE;
+}
+
+#members-list {
+    position: relative;
+    height: 60%;
+    width: 100%;
+    overflow: auto;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-color: darkgrey;
+    border: 2px ridge darkgrey;
+}
+
+.members-entry {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    color: #333;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+		rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+
+    transition: all 200ms;
+}
+
+#group-grid {
+    border: 2px ridge darkgrey;
+    border-radius: 4px;
+    overflow: auto;
+    height: 60%;
+    width: 100%;
+    display: grid;
+    gap: 0.2rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.group-card {
+    position:relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    background: #575757;
+    color: #fff;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem,
+		rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    height: 100%;
+    width: 100%;
+    padding:10px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: all 500ms;
+}
+
+.group-card > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-size: 0.7rem;
+}
+
+.group-card:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+		rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    background-color: greenyellow;
+    color: #333;
+ }
+
+.members-entry:hover {
+    box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em,
+		rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+    transform: translateY(-3px) scale(1.1);
+    color: #333;
+    background-color: greenyellow;
+ }
+
+.row-color-0 {
+    color: #EEE;
+    background-color: #333;
+}
