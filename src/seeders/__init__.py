@@ -24,6 +24,10 @@ def undo_members():
     db.session.execute("DELETE FROM members")
     db.session.commit()
 
+def undo_groups():
+    db.session.execute("DELETE FROM groups")
+    db.session.commit()
+
 @seed_commands.command("all")
 def seed():
     seed_members()
@@ -31,6 +35,7 @@ def seed():
 @seed_commands.command("undo")
 def undo():
     undo_members()
+    undo_groups()
 
 @seed_commands.command("restore")
 def restore():

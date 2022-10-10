@@ -29,6 +29,8 @@ def add_member():
 def gen_rand():
     size = request.json["size"]
     members = Member.query.all()
-    random_members = [m for m in random.sample(members, int(size))]
+    random_members = [members[n-1]
+                      for n
+                      in random.sample(range(1,len(members)+1), int(size))]
     new_group = construct_group(random_members, int(size))
     return {"new_group": new_group}
