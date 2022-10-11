@@ -59,6 +59,7 @@ h1 {
     color: #fff;
     background-color: darkgrey;
     border: 2px ridge darkgrey;
+    border-radius: 4px;
 }
 
 .members-entry {
@@ -125,4 +126,31 @@ h1 {
 .row-color-0 {
     color: #EEE;
     background-color: #333;
+}
+
+.green-hover:hover {
+    background-color: greenyellow;
+    color: #333;
+ }
+
+#add-member {
+    border: 0.12rem solid #EEE;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #333;
+}
+
+input {
+    margin-left: 1rem;
+}
+
+.small-top-margin {
+    width: 100%;
+    margin-top: 3px;
+}
+
+button {
+    background-color: #CC9933;
+    width:100%;
+    border-radius:4px;
 }

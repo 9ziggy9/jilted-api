@@ -1,4 +1,6 @@
 import "../../index.css";
+import GroupTools from "../GroupTools";
+import {ModalProvider} from "../../modal";
 
 const GroupRoster = () => {
   return (
@@ -60,6 +62,9 @@ const GroupRoster = () => {
 	      <p>david</p>
 	  </div>
 	</div>
+	<ModalProvider>
+	  <GroupTools />
+	</ModalProvider>
     </div>
   );
 };

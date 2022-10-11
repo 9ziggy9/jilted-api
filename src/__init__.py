@@ -10,7 +10,7 @@ flask_app = Flask(__name__)
 # TODO: configuration
 flask_app.config.from_object(Config)
 
-flask_app.register_blueprint(main.bp)
+flask_app.register_blueprint(main.bp, url_prefix="/api")
 db.init_app(flask_app)
 Migrate(flask_app, db)
 
