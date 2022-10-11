@@ -16,6 +16,11 @@ def get_members():
     members = Member.query.order_by(desc(Member.id)).all()
     return [m.to_dict() for m in members]
 
+@bp.route("/group/all")
+def get_groups():
+    groups = Group.query.order_by(desc(Group.id)).all()
+    return [g.to_dict() for g in groups]
+
 @bp.route("/member/<int:id>", methods=["DELETE"])
 def del_member(id):
     member = Member.query.get(id)

@@ -50,11 +50,15 @@ export const delMember = (id) => async (dispatch) => {
   }
 };
 
-export default function reducer(state, action) {
+export default function reducer(state = [], action) {
   switch(action.type) {
   case ADD: return [action.payload, ...state];
-  case GET_ALL: return [...action.payload];
+  case GET_ALL: return [...state, ...action.payload];
   case DEL: return state.filter(m => m.id !== action.payload);
-  default: return [];
+  default: {
+    console.log(state);
+    console.log("HIT DEFAULT");
+    return state;
+  }
   }
 }

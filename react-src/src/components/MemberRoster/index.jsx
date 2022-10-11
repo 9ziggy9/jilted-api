@@ -13,8 +13,6 @@ const MemberRoster = () => {
 
   useEffect(() => {
     dispatch(getMembers());
-    console.log("dispatching for members");
-    console.log(members);
   }, [dispatch]);
 
   return (
