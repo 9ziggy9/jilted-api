@@ -5,6 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {addMember} from "../../store/members";
 
 const AddMemberMenu = () => {
+  const {handleModal} = useContext(ModalContext);
   const [name, setName] = useState("");
   const dispatch = useDispatch();
 
@@ -12,6 +13,7 @@ const AddMemberMenu = () => {
     e.preventDefault();
     console.log("handling submission", `name: ${name}`);
     dispatch(addMember(name));
+    handleModal();
   };
 
   return (

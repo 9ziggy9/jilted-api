@@ -1,14 +1,14 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, jsonify, request
 from ..models import db, Member, Group
+from sqlalchemy import desc
 import random
 
 bp = Blueprint("main", __name__, url_prefix="")
 
-@bp.route("/")
-def main():
-    members = Member.query.all()
-    groups = Group.query.all()
-    return render_template("main.html", members=members, groups=groups)
+@bp.route("/member/all")
+def get_members():
+    members = Member.query.order_by(desc(Member.id)).all()
+    return [m.to_dict() for m in members]
 
 
 def construct_group(members, size):
