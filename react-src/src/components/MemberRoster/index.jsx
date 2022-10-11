@@ -1,4 +1,6 @@
-import "../index.css";
+import MemberTools from "../MemberTools";
+import "../../index.css";
+import {ModalProvider} from "../../modal";
 
 const MemberRoster = () => {
   return (
@@ -42,6 +44,9 @@ const MemberRoster = () => {
           Hello, Test
 	</li>
       </ul>
+      <ModalProvider>
+	<MemberTools />
+      </ModalProvider>
     </div>
   );
 };
